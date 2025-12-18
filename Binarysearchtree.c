@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure for BST node
+
 struct node {
     int data;
     struct node *left;
     struct node *right;
 };
 
-// Function to create a new node
+
 struct node* createNode(int value) {
     struct node* newNode = (struct node*)malloc(sizeof(struct node));
     newNode->data = value;
@@ -17,7 +17,6 @@ struct node* createNode(int value) {
     return newNode;
 }
 
-// Function to insert a node in BST
 struct node* insert(struct node* root, int value) {
     if (root == NULL) {
         return createNode(value);
@@ -32,7 +31,7 @@ struct node* insert(struct node* root, int value) {
     return root;
 }
 
-// In-order Traversal
+
 void inorder(struct node* root) {
     if (root != NULL) {
         inorder(root->left);
@@ -41,7 +40,7 @@ void inorder(struct node* root) {
     }
 }
 
-// Pre-order Traversal
+
 void preorder(struct node* root) {
     if (root != NULL) {
         printf("%d ", root->data);
@@ -50,7 +49,7 @@ void preorder(struct node* root) {
     }
 }
 
-// Post-order Traversal
+
 void postorder(struct node* root) {
     if (root != NULL) {
         postorder(root->left);
@@ -59,7 +58,7 @@ void postorder(struct node* root) {
     }
 }
 
-// Main function
+
 int main() {
     struct node* root = NULL;
     int n, value, i;
@@ -84,3 +83,4 @@ int main() {
 
     return 0;
 }
+
