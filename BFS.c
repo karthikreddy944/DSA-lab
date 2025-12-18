@@ -2,17 +2,17 @@
 
 int a[10][10], visited[10], n, queue[10], front = -1, rear = -1;
 
-// Function to insert element into queue
+
 void enqueue(int v) {
     queue[++rear] = v;
 }
 
-// Function to delete element from queue
+
 int dequeue() {
     return queue[++front];
 }
 
-// BFS traversal
+
 void bfs(int start) {
     int i;
     enqueue(start);
@@ -54,3 +54,4 @@ int main() {
 
     return 0;
 }
+
