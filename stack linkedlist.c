@@ -6,9 +6,9 @@ struct Node {
     struct Node* next;
 };
 
-struct Node* top = NULL;  // Stack top pointer
+struct Node* top = NULL; 
 
-// Push operation
+
 void push(int value) {
     struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
     newNode->data = value;
@@ -17,7 +17,7 @@ void push(int value) {
     printf("\n%d pushed to stack.\n", value);
 }
 
-// Pop operation
+
 void pop() {
     if (top == NULL) {
         printf("\nStack Underflow! No elements to pop.\n");
@@ -30,7 +30,7 @@ void pop() {
     free(temp);
 }
 
-// Peek (Top element)
+
 void peek() {
     if (top == NULL) {
         printf("\nStack is empty.\n");
@@ -39,7 +39,7 @@ void peek() {
     printf("\nTop element: %d\n", top->data);
 }
 
-// Check if stack is empty
+
 void isEmpty() {
     if (top == NULL) {
         printf("\nStack is empty.\n");
@@ -48,7 +48,7 @@ void isEmpty() {
     }
 }
 
-// Display stack
+
 void display() {
     if (top == NULL) {
         printf("\nStack is empty.\n");
@@ -63,7 +63,7 @@ void display() {
     }
 }
 
-// -------- Main Menu --------
+
 int main() {
 
     int choice, value;
@@ -113,3 +113,4 @@ int main() {
 
     return 0;
 }
+
