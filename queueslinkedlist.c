@@ -6,16 +6,16 @@ struct Node {
     struct Node* next;
 };
 
-struct Node* front = NULL;  // Points to front of queue
-struct Node* rear = NULL;   // Points to rear of queue
+struct Node* front = NULL;  
+struct Node* rear = NULL;   
 
-// Enqueue operation
+
 void enqueue(int value) {
     struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
     newNode->data = value;
     newNode->next = NULL;
 
-    // If queue is empty
+    
     if (front == NULL && rear == NULL) {
         front = rear = newNode;
     } else {
@@ -26,7 +26,7 @@ void enqueue(int value) {
     printf("\n%d inserted into queue.\n", value);
 }
 
-// Dequeue operation
+
 void dequeue() {
     if (front == NULL) {
         printf("\nQueue Underflow! No elements to remove.\n");
@@ -38,14 +38,14 @@ void dequeue() {
 
     front = front->next;
 
-    // If queue becomes empty after deletion
+    
     if (front == NULL)
         rear = NULL;
 
     free(temp);
 }
 
-// Peek (front element)
+
 void peek() {
     if (front == NULL) {
         printf("\nQueue is empty.\n");
@@ -54,7 +54,7 @@ void peek() {
     }
 }
 
-// Check if queue is empty
+
 void isEmpty() {
     if (front == NULL)
         printf("\nQueue is empty.\n");
@@ -62,7 +62,7 @@ void isEmpty() {
         printf("\nQueue is NOT empty.\n");
 }
 
-// Display queue
+
 void display() {
     if (front == NULL) {
         printf("\nQueue is empty.\n");
@@ -78,7 +78,7 @@ void display() {
     printf("\n");
 }
 
-// -------- MAIN MENU --------
+
 int main() {
     int choice, value;
 
@@ -127,3 +127,4 @@ int main() {
 
     return 0;
 }
+
