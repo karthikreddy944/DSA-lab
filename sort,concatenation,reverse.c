@@ -5,16 +5,12 @@ struct Node {
     int data;
     struct Node* next;
 };
-
-
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
     newNode->next = NULL;
     return newNode;
 }
-
-
 void insertEnd(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
     if (*head == NULL) {
@@ -26,8 +22,6 @@ void insertEnd(struct Node** head, int data) {
         temp = temp->next;
     temp->next = newNode;
 }
-
-
 void display(struct Node* head) {
     if (head == NULL) {
         printf("List is empty.\n");
@@ -40,8 +34,6 @@ void display(struct Node* head) {
     }
     printf("NULL\n");
 }
-
-
 void sortList(struct Node** head) {
     if (*head == NULL) {
         printf("List is empty.\n");
